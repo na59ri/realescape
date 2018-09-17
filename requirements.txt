@@ -6,7 +6,7 @@ future==0.16.0
 idna==2.7
 itsdangerous==0.24
 Jinja2==2.10
-kintone-SDK-for-Python==1.1.0
+git+https://github.com/sada-nishio/kintone_sdk4python
 line-bot-sdk==1.8.0
 MarkupSafe==1.0
 requests==2.19.1
