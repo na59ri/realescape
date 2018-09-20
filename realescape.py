@@ -4,12 +4,12 @@ app = Flask(__name__)
 @app.route("/clova/webhook")
 def hello():
     print("/clova/webhook start")
-    return "Hello World!!"
+    return 'OK'
 
 @app.route("/bot/webhook")
 def hello():
     print("/bot/webhook start")
-    return "Hello World!!"
+    return 'OK'
 
 if __name__ == "__main__":
     app.run()
