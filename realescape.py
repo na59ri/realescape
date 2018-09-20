@@ -2,17 +2,18 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/clova/webhook")
-def hello():
+@app.route("/clova/webhook", methods=['POST'])
+def hello_clova():
     print("/clova/webhook start")
-    return '200'
+    return 'OK'
 
 
-@app.route("/bot/webhook")
-def hello():
+@app.route("/bot/webhook", methods=['POST'])
+def hello_bot():
     print("/bot/webhook start")
-    return '200'
+    return 'OK'
 
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.getenv("PORT"))
+    app.run(host="0.0.0.0", port=port)
