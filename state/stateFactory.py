@@ -20,17 +20,22 @@ class stateFactory(object):
     def input_beacon(self, event):
         return self.BeaconEvent(event)
 
-    class InputNoEvent(event):
-        print("stateFactory InputNoEvent start")
+    class InputNoEvent:
+        def __init__(self, event):
+            print("stateFactory InputNoEvent start")
 
-    class MessageEvent(event):
-        print("stateFactory MessageEvent start")
+    class MessageEvent:
+        def __init__(self, event):
+            print("stateFactory MessageEvent start")
 
-    class FollowEvent(event):
-        print("stateFactory FollowEvent start")
+    class FollowEvent:
+        def __init__(self, event):
+            print("stateFactory FollowEvent start")
 
-    class UnfollowEvent(event):
-        print("stateFactory UnfollowEvent start")
+    class UnfollowEvent:
+        def __init__(self, event):
+            print("stateFactory UnfollowEvent start")
 
-    class BeaconEvent(event):
-        print("stateFactory BeaconEvent start")
+    class BeaconEvent:
+        def __init__(self, event):
+            print("stateFactory BeaconEvent start")
