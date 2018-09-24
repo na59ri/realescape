@@ -1,5 +1,8 @@
-from flask import Flask
-app = Flask(__name__)
+import os
+from flask import Flask, request
+
+import sys
+from .control.lineBotController import LineBotController
 
 
 @app.route("/clova/webhook", methods=['POST'])
@@ -9,8 +12,10 @@ def hello_clova():
 
 
 @app.route("/bot/webhook", methods=['POST'])
-def hello_bot():
+def receive_bot():
     print("/bot/webhook start")
+    LineBotController.action(request)
+
     return 'OK'
 
 
