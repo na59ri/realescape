@@ -1,6 +1,6 @@
 import os
 from flask import Flask, request
-from .control import LineBotController
+from .control.lineBotController import LineBotController
 
 app = Flask(__name__)
 
