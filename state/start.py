@@ -4,16 +4,16 @@ import stateFactory
 class startFactory(stateFactory):
 
     class InputNoEvent(event=null):
-        print "stateFactory InputNoEvent start"
+        print("stateFactory InputNoEvent start")
 
     class MessageEvent(event):
-        print "stateFactory MessageEvent start"
+        print("stateFactory MessageEvent start")
 
     class FollowEvent(event):
-        print "stateFactory FollowEvent start"
+        print("stateFactory FollowEvent start")
 
     class UnfollowEvent(event):
-        print "stateFactory UnfollowEvent start"
+        print("stateFactory UnfollowEvent start")
 
     class BeaconEvent(event):
-        print "stateFactory BeaconEvent start"
+        print("stateFactory BeaconEvent start")
