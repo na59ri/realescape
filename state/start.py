@@ -3,7 +3,7 @@ import stateFactory
 
 class startFactory(stateFactory):
 
-    class InputNoEvent(event=null):
+    class InputNoEvent(event=''):
         print("stateFactory InputNoEvent start")
 
     class MessageEvent(event):

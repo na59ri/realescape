@@ -20,7 +20,7 @@ class stateFactory(object):
     def input_beacon(self, event):
         return self.BeaconEvent(event)
 
-    class InputNoEvent(event=null):
+    class InputNoEvent(event=''):
         print("stateFactory InputNoEvent start")
 
     class MessageEvent(event):
