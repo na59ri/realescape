@@ -2,7 +2,7 @@ class stateFactory(object):
 
     @classmethod
     def input_noEvent(self):
-        return self.InputNoEvent()
+        return self.InputNoEvent(event)
 
     @classmethod
     def input_messageEvent(self, event):
