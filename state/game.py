@@ -3,7 +3,7 @@ import stateFactory
 
 class gameFactory(stateFactory):
 
-    class InputNoEvent(event=''):
+    class InputNoEvent(event):
         print("stateFactory InputNoEvent start")
 
     class MessageEvent(event):
