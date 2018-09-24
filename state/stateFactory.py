@@ -18,7 +18,7 @@ class stateFactory(object):
 
     @classmethod
     def input_beacon(self, event):
-        return self.BeaconEvent(event):
+        return self.BeaconEvent(event)
 
     class InputNoEvent(event=null):
         print("stateFactory InputNoEvent start")
