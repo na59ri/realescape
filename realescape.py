@@ -1,6 +1,9 @@
 import os
 from flask import Flask, request
-from .control.lineBotController import LineBotController
+
+import sys
+sys.path.append(os.getcwd()+'/control')
+from lineBotController import LineBotController
 
 app = Flask(__name__)
 
