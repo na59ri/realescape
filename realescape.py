@@ -1,8 +1,6 @@
 import os
 from flask import Flask, request
-
-import sys
-from .control.lineBotController import LineBotController
+from .control import LineBotController
 
 
 @app.route("/clova/webhook", methods=['POST'])
