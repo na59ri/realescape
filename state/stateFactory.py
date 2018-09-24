@@ -1,5 +1,8 @@
 class stateFactory(object):
 
+    def __init__(self):
+        print('stateFactory')
+
     @classmethod
     def input_noEvent(self, event=''):
         return self.InputNoEvent(event)
