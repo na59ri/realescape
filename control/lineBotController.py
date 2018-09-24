@@ -19,6 +19,13 @@ from linebot.models import (
     TextSendMessage,
 )
 
+
+# 独自ライブラリ呼び出し
+import sys
+sys.path.append(os.getcwd() + '/state')
+from state import state
+
+
 # LINE Access Token
 LINE_BOT_ACCESS_TOKEN = os.environ["LINE_BOT_ACCESS_TOKEN"]
 # LINE Channel Secret
@@ -45,14 +52,14 @@ class LineBotController:
         except InvalidSignatureError:
             abort(400)
 
+
 # ----------------------------------------------
 # メッセージを受信
-
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("MessageEvent start")
-
+    state.action(MessageEvent, event)
     # line_bot_api.reply_message(
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))

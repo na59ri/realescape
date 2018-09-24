@@ -1,10 +1,9 @@
 import os
 from flask import Flask, request
 
+# 独自ライブラリ呼び出し
 import sys
-path = os.getcwd() + '/control'
-print(path)
-sys.path.append(path)
+sys.path.append(os.getcwd() + '/control')
 from lineBotController import LineBotController
 
 app = Flask(__name__)
@@ -20,7 +19,6 @@ def hello_clova():
 def receive_bot():
     print("/bot/webhook start")
     LineBotController.action(request)
-
     return 'OK'
 
 
