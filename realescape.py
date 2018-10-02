@@ -12,6 +12,7 @@ app = Flask(__name__)
 @app.route("/clova/webhook", methods=['POST'])
 def hello_clova():
     print("/clova/webhook start")
+    LineClovaController.action(request)
     return 'OK'
 
 
